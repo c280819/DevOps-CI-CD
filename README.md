@@ -42,6 +42,9 @@ todoapp-devops/
 ├── images/           
 └── README.md
 
+Kubernetes manifests are maintained in a separate repository: [k8s-resources](https://github.com/c280819/k8s-todo-app)
+
+
 Prerequisites
 1.Ubuntu/Debian machine
 2.Docker & Docker Compose
