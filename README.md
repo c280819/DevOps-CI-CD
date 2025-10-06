@@ -15,11 +15,16 @@ This project demonstrates a **containerized Flask TodoApp** deployed on a **Kube
 
 ## Features
 
-- Dockerized TodoApp with separate database container  
-- Kubernetes Deployment and Service configuration  
-- Persistent storage using PV and PVC  
-- Automated CI/CD pipeline  
-- Metrics collection and visualization  
+- Dockerized TodoApp with separate database container
+  
+- Kubernetes Deployment and Service configuration
+
+- Persistent storage using PV and PVC
+  
+- Automated CI/CD pipeline
+  
+- Metrics collection and visualization
+
 - Alerts for proactive monitoring  
 
 
@@ -27,30 +32,52 @@ This project demonstrates a **containerized Flask TodoApp** deployed on a **Kube
 
 todoapp-devops/
 ├── Dockerfile
+
 ├── docker-compose.yml
+
 ├── k8s/
+
 │   ├── deployment.yaml
+
 │   ├── service.yaml
+
 │   ├── pv-pvc.yaml
+
 │   └── helm-chart/
+
+
 ├── ci-cd/
+
 │   ├── github-actions.yaml
+
 │   └── argocd-config.yaml
+
 ├── monitoring/
+
 │   ├── prometheus.yaml
+
 │   └── grafana-dashboards/
-├── images/           
+
+├── images/     
+
 └── README.md
 
 
 Prerequisites
 1.Ubuntu/Debian machine
+
 2.Docker & Docker Compose
+
 3.Kubernetes cluster (Minikube/kubeadm)
+
 4.Helm
+
 5.GitHub account
+
 6.ArgoCD installed on Kubernetes
+
 7.Prometheus & Grafana
+
 
 Setup & Installation
 1. Clone the repository
@@ -65,21 +92,30 @@ docker build -t todoapp .
 docker-compose up -d
 
 5. Kubernetes Deployment
+6. 
 kubectl apply -f k8s/deployment.yaml
+
 kubectl apply -f k8s/service.yaml
+
 kubectl apply -f k8s/pv-pvc.yaml
+
 Access TodoApp service via ClusterIP / NodePort
+
 
 Kubernetes manifests are maintained in a separate repository: [k8s-resources]
 
 https://github.com/c280819/k8s-todo-app
 
 7. CI/CD
+8. 
 GitHub Actions handles continuous integration (build & test)
+
 ArgoCD automates deployment to Kubernetes cluster
 
-8. Monitoring
+9. Monitoring
+10. 
 Prometheus collects metrics from cluster and TodoApp
+
 Grafana dashboards visualize metrics
 
 Alerts configured for proactive monitoring
