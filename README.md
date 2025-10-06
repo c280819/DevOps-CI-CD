@@ -63,7 +63,7 @@ todoapp-devops/
 └── README.md
 
 
-Prerequisites
+## Prerequisites
 1.Ubuntu/Debian machine
 
 2.Docker & Docker Compose
@@ -79,7 +79,8 @@ Prerequisites
 7.Prometheus & Grafana
 
 
-Setup & Installation
+## Setup & Installation
+
 1. Clone the repository
 git clone https://github.com/c280819>/todo-app.git
 
@@ -91,8 +92,8 @@ docker build -t todoapp .
 
 docker-compose up -d
 
-5. Kubernetes Deployment
-6. 
+4. Kubernetes Deployment
+
 kubectl apply -f k8s/deployment.yaml
 
 kubectl apply -f k8s/service.yaml
@@ -106,14 +107,14 @@ Kubernetes manifests are maintained in a separate repository: [k8s-resources]
 
 https://github.com/c280819/k8s-todo-app
 
-7. CI/CD
-8. 
+5. CI/CD
+
 GitHub Actions handles continuous integration (build & test)
 
 ArgoCD automates deployment to Kubernetes cluster
 
-9. Monitoring
-10. 
+6. Monitoring
+
 Prometheus collects metrics from cluster and TodoApp
 
 Grafana dashboards visualize metrics
