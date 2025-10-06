@@ -42,8 +42,6 @@ todoapp-devops/
 ├── images/           
 └── README.md
 
-Kubernetes manifests are maintained in a separate repository: [k8s-resources](https://github.com/c280819/k8s-todo-app)
-
 
 Prerequisites
 1.Ubuntu/Debian machine
@@ -57,23 +55,30 @@ Prerequisites
 Setup & Installation
 1. Clone the repository
 git clone https://github.com/c280819>/todo-app.git
+
 cd todo-app
 
-2. Docker (Optional local testing)
+3. Docker (Optional local testing)
+   
 docker build -t todoapp .
+
 docker-compose up -d
 
-3. Kubernetes Deployment
+5. Kubernetes Deployment
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 kubectl apply -f k8s/pv-pvc.yaml
-Access TodoApp service via ClusterIP / NodePort / Ingress as configured
+Access TodoApp service via ClusterIP / NodePort
 
-4. CI/CD
+Kubernetes manifests are maintained in a separate repository: [k8s-resources]
+
+https://github.com/c280819/k8s-todo-app
+
+7. CI/CD
 GitHub Actions handles continuous integration (build & test)
 ArgoCD automates deployment to Kubernetes cluster
 
-5. Monitoring
+8. Monitoring
 Prometheus collects metrics from cluster and TodoApp
 Grafana dashboards visualize metrics
 
