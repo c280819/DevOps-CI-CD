@@ -84,7 +84,7 @@ todoapp-devops/
 1. Clone the repository
 git clone https://github.com/c280819>/todo-app.git
 
-cd todo-app
+2.cd todo-app
 
 3. Docker (Optional local testing)
    
@@ -107,11 +107,13 @@ Kubernetes manifests are maintained in a separate repository: [k8s-resources]
 
 https://github.com/c280819/k8s-todo-app
 
+
 5. CI/CD
 
 GitHub Actions handles continuous integration (build & test)
 
 ArgoCD automates deployment to Kubernetes cluster
+
 
 6. Monitoring
 
